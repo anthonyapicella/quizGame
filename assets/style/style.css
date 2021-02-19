@@ -1,19 +1,43 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(196, 197, 199);
+    background-color: rgb(167, 176, 195);
+}
+
+.header {
+    padding: 0px 0px 36px 0px;
+    
+}
+
+h1 {
+    text-shadow: 25px 25px 25px 25px  black;
 }
 
 /* Question Card */
 
+.card {
+    box-shadow: 8px 10px 25px 10px rgb(39, 45, 53);
+    border: black;
+    border-radius: 25px 25px 25px 25px;
+    background-color: rgb(128, 151, 175);
+}
+
+.card-header {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    border-radius: 25px 25px 25px 25px;
+}
+
 .card-body {
-    margin: 1,1,1,1;
-    background-color:rgb(146, 182, 218);
-    box-shadow: black;
+    background-color: rgb(171, 196, 221);
+    
 }
 
 .card-title {
@@ -23,26 +47,34 @@ body {
 
 .card-text {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
+.card-footer {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    border-radius: 0px 0px 25px 25px;
+}
 
+/* buttons */
 
+.btn-primary {
+    color: #212529;
+    background-color: rgb(119, 156, 204);
+    border-color: rgb(77, 106, 144);
+}
+.btn-primary:hover {
+    color: #212529;
+    background-color: rgb(91, 118, 153);
+    border-color: rgb(91, 118, 153);
+}
 
+.btn-primary:active:focus {
+    color: #212529;
+    background-color: rgb(91, 118, 153);
+    border-color: rgb(91, 118, 153);
+}
+/* footer */
 
-
-
-
-
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
