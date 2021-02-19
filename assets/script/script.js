@@ -13,18 +13,24 @@ THEN I can save my initials and my score
 */
 
 
-// declare variable for start button corresponding function
+// declare variables for buttons and corresponding functions
 var howButton = document.getElementById("how-btn");
 var startButton = document.getElementById("start-btn");
 var quizContainer = document.getElementById("quizContainer");
 var quizRules = document.getElementById("rules");
+var timeleft = document.getElementById("timer");
 
-
+// event listeners for howto and start buttons
 howButton.addEventListener("click", howToPlay);
 
 startButton.addEventListener("click", startQuiz);
 
-console.log(quizRules);
+// countdown timer code
+
+var timeleft = 90;
+
+
+// functions for 
 
 function howToPlay(){
     howButton.classList.add("hide");
@@ -36,5 +42,14 @@ function startQuiz() {
     startButton.classList.add("hide");
     quizRules.classList.add("hide");
     quizContainer.classList.remove("hide");
+    var quizTimer = setInterval(function(){
+        if(timeleft <= 0){
+          clearInterval(quizTimer);
+          document.getElementById("timer").innerHTML = "GAME OVER";
+        } else {
+          document.getElementById("timer").innerHTML = timeleft;
+        }
+        timeleft -= 1;
+      }, 1000);
 }
 
