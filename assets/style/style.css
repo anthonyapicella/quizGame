@@ -23,6 +23,12 @@ h1 {
     justify-content: center;
 }
 
+p {
+    text-align: center;
+}
+
+
+
 /* Question Card */
 
 .card {
@@ -30,6 +36,7 @@ h1 {
     border: black;
     border-radius: 25px 25px 25px 25px;
     background-color: rgb(128, 151, 175);
+    justify-content: center;
 }
 
 .card-header {
@@ -42,7 +49,7 @@ h1 {
 
 .card-body {
     background-color: rgb(171, 196, 221);
-    
+
 }
 
 .card-title {

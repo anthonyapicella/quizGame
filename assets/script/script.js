@@ -14,17 +14,17 @@ THEN I can save my initials and my score
 
 
 // declare variable for start button corresponding function
-var startButton = document.getElementById('start-btn');
+var startButton = document.getElementById("start-btn");
 var quizContainer = document.getElementById("quizContainer");
+var quizRules = document.getElementById("rules")
 
 startButton.addEventListener('click', startQuiz)
 
+console.log(quizRules)
+
 function startQuiz() {
     startButton.classList.add("hide")
+    quizRules.classList.add("hide")
     quizContainer.classList.remove("hide")
-}
-
-function selectAnswer(){
-
 }
 
