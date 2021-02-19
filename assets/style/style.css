@@ -95,5 +95,15 @@ p {
     box-shadow: 3px 5px 20px 2px rgb(39, 45, 53);
 }
 
+#how-btn {
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    box-shadow: 3px 5px 20px 2px rgb(39, 45, 53);
+}
 /* footer */
 
