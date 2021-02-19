@@ -12,13 +12,16 @@ WHEN the game is over
 THEN I can save my initials and my score
 */
 
+
 // declare variable for start button corresponding function
 var startButton = document.getElementById('start-btn');
+var quizContainer = document.getElementById("quizContainer");
 
 startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
-
+    startButton.classList.add("hide")
+    quizContainer.classList.remove("hide")
 }
 
 function selectAnswer(){

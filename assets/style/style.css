@@ -9,6 +9,10 @@ body {
     background-color: rgb(167, 176, 195);
 }
 
+.hide {
+    display: none;
+}
+
 .header {
     padding: 0px 0px 36px 0px;
     
