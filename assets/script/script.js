@@ -16,31 +16,32 @@ THEN I can save my initials and my score
 // declare variables for buttons and corresponding functions
 var howButton = document.getElementById("how-btn");
 var startButton = document.getElementById("start-btn");
-var quizContainer = document.getElementById("quizContainer");
+var quizContainer = document.getElementById("quiz-container");
 var quizRules = document.getElementById("rules");
 var timeleft = document.getElementById("timer");
 
+
+var questionContainerEl = document.getElementById("quiz-container");
 var questionEl = document.getElementById("question");
-var answerButtonEl = document.getElementById("answer-btn")
+var answerButtonEl = document.getElementById("answers")
 
 // event listeners for howto and start buttons
 howButton.addEventListener("click", howToPlay);
-
 startButton.addEventListener("click", startQuiz);
-
-// countdown timer code
 
 var timeleft = 90;
 var score =0;
 
 
-// functions for 
+// Displays game rules on click
 
 function howToPlay(){
     howButton.classList.add("hide");
     quizRules.classList.remove("hide");
     startButton.classList.remove("hide")
 }
+
+// Starts quiz and timer on click
 
 function startQuiz() {
     startButton.classList.add("hide");
@@ -58,17 +59,7 @@ function startQuiz() {
 }
 
 
-
-function nextQuestion( {
-  questionEl.innerHTML = question.question
-})
-
-for (var i = 0; i < myQuestions.length; i++) {
-  var answers = document.getElementById()
-}
-
-var myQuestions = [ 
-  {
+var myQuestions = [ {
     question: "'Snakes?! Why’d It Have To Be Snakes?'",
     answers: [
       {text: "Star Lord", correct: false},
@@ -77,37 +68,31 @@ var myQuestions = [
       {text: "Han Solo", correct: false}
     ],
   
-  },
-  {
+  }, {
     question: "'With great power, comes great responsibilty.'",
-    answers: [
-      {text: "Ben Parker", correct: true},
-      {text: "The Ancient One", correct: false},
-      {text: "Alfred Pennyworth", correct: false},
-      {text: "Yoda", correct: false}
-    ],
-  
-  },
-  
-
-  {
+      answers: [
+        {text: "Ben Parker", correct: true},
+        {text: "The Ancient One", correct: false},
+        {text: "Alfred Pennyworth", correct: false},
+        {text: "Yoda", correct: false}
+      ],
+  }, {
     question: "'Make it so'",
-    answers: [
-      {text: "Captain Picard", correct: true},
-      {text: "Captain Hook", correct: false},
-      {text: "Captain Crunch", correct: false},
-      {text: "Captain Marvel", correct: false}
-    ],
+      answers: [
+        {text: "Captain Picard", correct: true},
+        {text: "Captain Hook", correct: false},
+        {text: "Captain Crunch", correct: false},
+        {text: "Captain Marvel", correct: false}
+      ],
+  }, {
+    question: "Why, you stuck up, half-witted, scruffy-looking, Nerf-herder!",
+      answers: [
+        {text: "Princess Leia", correct: true},
+        {text: "Princess Jasmine", correct: false},
+        {text: "Princess Buttercup", correct: false},
+        {text: "Princess Peach", correct: false}
+      ],
+  } 
 
-  }
-  question: "Why, you stuck up, half-witted, scruffy-looking, Nerf-herder!",
-    answers: [
-      {text: "Princess Leia", correct: true},
-      {text: "Princess Jasmine", correct: false},
-      {text: "Princess Buttercup", correct: false},
-      {text: "Princess Peach", correct: false}
-    ],
-
-  }
 
 ];

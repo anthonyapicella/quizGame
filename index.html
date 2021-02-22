@@ -26,21 +26,21 @@
         </div>
     </div>
     
-    <div id= "quizContainer" class="container hide">
+    <div id= "quiz-container" class="container hide">
         <div class="card text-center">
-            <div class="card-header fw-light">
+            <div class="card-header">
               TIME LEFT: <span id= "timer">90</span>
             </div>
             <div class="card-body">  
-                <p class="card-text">Who's scruffy looking?</p>
-                <div class="btn-group-vertical">
-                    <button id= "answer-btn" class="btn btn-primary btn-lg">Answer1</button>
-                    <button id= "answer-btn" class="btn btn-primary btn-lg">Answer2</button>
-                    <button id= "answer-btn" class="btn btn-primary btn-lg">Answer3</button>
-                    <button id= "answer-btn" class="btn btn-primary btn-lg">Answer4</button>
+                <p class="card-text"><span id="question"></span></p>
+                <div id= "answers" class="btn-group-vertical">
+                    <button id= "answer-btn" class="btn btn-primary btn-lg"></button>
+                    <button id= "answer-btn" class="btn btn-primary btn-lg"></button>
+                    <button id= "answer-btn" class="btn btn-primary btn-lg"></button>
+                    <button id= "answer-btn" class="btn btn-primary btn-lg"></button>
                 </div>
             </div>
-            <div class="card-footer fw-light">
+            <div class="card-footer">
                 score: <span>0</span>
             </div>
         </div>

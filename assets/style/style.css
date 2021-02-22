@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-    background-color: rgb(167, 176, 195);
+    background-color: rgb(119, 156, 204);
     border: 6px solid white;
     box-shadow: 3px 3px 3px 1px rgb(39, 49, 53);
     margin-bottom: 20px;
@@ -25,7 +25,7 @@ body {
 }
 
 #header-body { 
-    background-color: rgb(167, 176, 195);
+    background-color: rgb(119, 156, 204);
 
 }
 
