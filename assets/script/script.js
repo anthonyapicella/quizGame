@@ -20,6 +20,9 @@ var quizContainer = document.getElementById("quizContainer");
 var quizRules = document.getElementById("rules");
 var timeleft = document.getElementById("timer");
 
+var questionEl = document.getElementById("question");
+var answerButtonEl = document.getElementById("answer-btn")
+
 // event listeners for howto and start buttons
 howButton.addEventListener("click", howToPlay);
 
@@ -28,6 +31,7 @@ startButton.addEventListener("click", startQuiz);
 // countdown timer code
 
 var timeleft = 90;
+var score =0;
 
 
 // functions for 
@@ -53,3 +57,57 @@ function startQuiz() {
       }, 1000);
 }
 
+
+
+function nextQuestion( {
+  questionEl.innerHTML = question.question
+})
+
+for (var i = 0; i < myQuestions.length; i++) {
+  var answers = document.getElementById()
+}
+
+var myQuestions = [ 
+  {
+    question: "'Snakes?! Why’d It Have To Be Snakes?'",
+    answers: [
+      {text: "Star Lord", correct: false},
+      {text: "Jeff 'The Dude' Lebowski", correct: false},
+      {text: "Indiana Jones", correct: true},
+      {text: "Han Solo", correct: false}
+    ],
+  
+  },
+  {
+    question: "'With great power, comes great responsibilty.'",
+    answers: [
+      {text: "Ben Parker", correct: true},
+      {text: "The Ancient One", correct: false},
+      {text: "Alfred Pennyworth", correct: false},
+      {text: "Yoda", correct: false}
+    ],
+  
+  },
+  
+
+  {
+    question: "'Make it so'",
+    answers: [
+      {text: "Captain Picard", correct: true},
+      {text: "Captain Hook", correct: false},
+      {text: "Captain Crunch", correct: false},
+      {text: "Captain Marvel", correct: false}
+    ],
+
+  }
+  question: "Why, you stuck up, half-witted, scruffy-looking, Nerf-herder!",
+    answers: [
+      {text: "Princess Leia", correct: true},
+      {text: "Princess Jasmine", correct: false},
+      {text: "Princess Buttercup", correct: false},
+      {text: "Princess Peach", correct: false}
+    ],
+
+  }
+
+];

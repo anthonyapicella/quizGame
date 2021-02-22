@@ -14,17 +14,31 @@ body {
 }
 
 .header {
-    padding: 0px 0px 36px 0px;
-    
+    background-color: rgb(167, 176, 195);
+    border: 6px solid white;
+    box-shadow: 3px 3px 3px 1px rgb(39, 49, 53);
+    margin-bottom: 20px;
+}
+
+#header-border {
+    border: 2.5px solid rgb(91, 103, 114);
+}
+
+#header-body { 
+    background-color: rgb(167, 176, 195);
+
 }
 
 h1 {
     display: flex;
     justify-content: center;
+    
 }
 
 p {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    
 }
 
 
@@ -32,24 +46,29 @@ p {
 /* Question Card */
 
 .card {
-    box-shadow: 8px 8px 20px 2px rgb(39, 45, 53);
-    border: black;
+    margin-top: 10px;
+    box-shadow: 3px 6px 6px 2px rgb(39, 45, 53);
     border-radius: 25px 25px 25px 25px;
     background-color: rgb(128, 151, 175);
     justify-content: center;
 }
 
 .card-header {
-    color: black;
+    color: rgb(47, 47, 47);
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 2rem;
-    border-radius: 25px 25px 25px 25px;
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+#timer {
+    color: rgb(120, 0, 0);
 }
 
 .card-body {
     background-color: rgb(171, 196, 221);
-
+    padding: 10px;
+    border: 2px solid white;
+    box-shadow: 3px 6px 6px 2px rgb(39, 49, 53);
 }
 
 .card-title {
@@ -63,11 +82,12 @@ p {
 }
 
 .card-footer {
-    color: black;
+    color: rgb(47, 47, 47);
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 2rem;
+    font-weight: 200;
+    font-size: 1.5rem;
     border-radius: 0px 0px 25px 25px;
+    
 }
 
 /* buttons */
@@ -77,6 +97,7 @@ p {
     border-radius: 20px;
     background-color: rgb(119, 156, 204);
     border-color: rgb(77, 106, 144);
+    box-shadow: 2px 3px 4px 1px rgb(39, 45, 53);
 }
 .btn-primary:hover {
     color: #212529;
@@ -92,7 +113,7 @@ p {
     margin-bottom: 40px;
     margin-left: 40px;
     margin-right: 40px;
-    box-shadow: 3px 5px 20px 2px rgb(39, 45, 53);
+    box-shadow: 5px 8px 8px 2px rgb(39, 45, 53);
 }
 
 #how-btn {
@@ -103,7 +124,7 @@ p {
     margin-bottom: 40px;
     margin-left: 40px;
     margin-right: 40px;
-    box-shadow: 3px 5px 20px 2px rgb(39, 45, 53);
+    box-shadow: 5px 8px 8px 2px rgb(39, 45, 53);
 }
 /* footer */
 
