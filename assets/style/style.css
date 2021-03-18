@@ -68,7 +68,7 @@ p {
     background-color: rgb(171, 196, 221);
     padding: 10px;
     border: 2px solid white;
-    box-shadow: 3px 6px 6px 2px rgb(39, 49, 53);
+    box-shadow: 2px 2px 2px 2px rgb(39, 49, 53);
 }
 
 .card-title {
