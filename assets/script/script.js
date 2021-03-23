@@ -118,19 +118,14 @@ function startQuiz() {
         }
         timeleft -= 1;
     }, 1000);
-    // nextQuestion();
+
 }
 
-// function nextQuestion() {
-//     showQuestion();
-// }
-// function showQuestion() {
-//     questionEl.innerText.append(myQuestions.question);
-// }
 
 function selectAnswer(button) {
     if(button.getAttribute("data-correct") == "true") {
         score = score += timeleft
+        console.log(score);
         document.querySelector("#score").innerHTML = score;
     }else{
         timeleft = timeleft -= 6
@@ -143,15 +138,11 @@ function selectAnswer(button) {
             myQuestions[j].answers[i].text;
         document
             .getElementById("answer-btn" + i)
-            .setAttribute("data-correct", myQuestions[0].answers[i].correct);
+            .setAttribute("data-correct", myQuestions[j].answers[i].correct);
     }
 
     j++
 }
-
-
-// test
-
 
 
 btn1.addEventListener("click", () => {
