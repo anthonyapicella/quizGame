@@ -92,6 +92,7 @@ p {
 
 /* buttons */
 
+
 .btn-primary {
     color: #212529;
     border-radius: 20px;
@@ -105,6 +106,13 @@ p {
     border-color: rgb(91, 118, 153);
 }
 
+button.active.focus, button.active:focus,
+button.focus, button:active.focus, 
+button:active:focus, button:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: white;
+}
 
 #start-btn {
     justify-content: center;

@@ -17,6 +17,7 @@ var howButton = document.getElementById("how-btn");
 var startButton = document.getElementById("start-btn");
 var quizContainer = document.getElementById("quiz-container");
 var quizRules = document.getElementById("rules");
+var gameOverCard = document.getElementById("gameOver");
 var timeleft = document.getElementById("timer");
 
 var questionContainerEl = document.getElementById("quiz-container");
@@ -78,6 +79,60 @@ var myQuestions = [
             { text: "Princess Peach", correct: false },
         ],
     },
+    {
+        question: "'On your left.'",
+        answers: [
+            { text: "Robin", correct: false },
+            { text: "Hawkgirl", correct: false },
+            { text: "The Falcon", correct: true },
+            { text: "Dove", correct: false },
+        ],
+    },
+    {
+        question: "'You shall not pass!'",
+        answers: [
+            { text: "Oz, the Great and Powerful", correct: false },
+            { text: "Gandalf the White", correct: false },
+            { text: "Albus Dumbledore", correct: false },
+            { text: "Gandalf the Grey", correct: true },
+        ],
+    },
+    {
+        question: "'Come with me if you want to live.'",
+        answers: [
+            { text: "The Terminator, model: T-800", correct: true },
+            { text: "RoboCop", correct: false },
+            { text: "The Iron Giant", correct: false },
+            { text: "Optimus Prime", correct: false },
+        ],
+    },
+    {
+        question: "'Life, finds a way.'",
+        answers: [
+            { text: "Dr. Doolittle", correct: false },
+            { text: "Dr. Ian Malcolm", correct: true },
+            { text: "Dr. Frankenstein", correct: false },
+            { text: "Dr Hannibal Lector", correct: false },
+        ],
+    },
+    {
+        question: "'Dodge this.'",
+        answers: [
+            { text: "Patches O'Houlihan", correct: false },
+            { text: "Jerry Maguire", correct: false },
+            { text: "Trinity", correct: true },
+            { text: "Deadpool", correct: false },
+        ],
+    },
+    {
+        question: "'I love you 3000'",
+        answers: [
+            { text: "Morgan Freeman", correct: false },
+            { text: "Morgan Stark", correct: true },
+            { text: "Morgan le Fay", correct: false },
+            { text: "Morgan Jones", correct: false },
+        ],
+    },
 ];
 
 // Displays game rules on click
@@ -113,14 +168,14 @@ function startQuiz() {
         if (timeleft <= 0) {
             clearInterval(quizTimer);
             document.getElementById("timer").innerHTML = "GAME OVER";
+            gameOver()
         } else {
             document.getElementById("timer").innerHTML = timeleft;
         }
         timeleft -= 1;
     }, 1000);
 
-}
-
+};
 
 function selectAnswer(button) {
     if(button.getAttribute("data-correct") == "true") {
@@ -128,7 +183,7 @@ function selectAnswer(button) {
         console.log(score);
         document.querySelector("#score").innerHTML = score;
     }else{
-        timeleft = timeleft -= 6
+        timeleft = timeleft -= 15
     }
     document.getElementById("question").innerHTML = myQuestions[j].question;
 
@@ -142,7 +197,16 @@ function selectAnswer(button) {
     }
 
     j++
+    
+    
 }
+
+function gameOver(){
+    quizContainer.classList.add("hide");
+    gameOverCard.classList.remove("hide");
+
+};
+
 
 
 btn1.addEventListener("click", () => {
