@@ -18,7 +18,10 @@ var startButton = document.getElementById("start-btn");
 var quizContainer = document.getElementById("quiz-container");
 var quizRules = document.getElementById("rules");
 var gameOverCard = document.getElementById("gameOver");
+var winner = document.getElementById("you-win");
 var timeleft = document.getElementById("timer");
+var playerInit;
+var playerScore;
 
 var questionContainerEl = document.getElementById("quiz-container");
 var questionEl = document.getElementById("question");
@@ -28,7 +31,8 @@ var btn2 = document.getElementById("answer-btn1")
 var btn3 = document.getElementById("answer-btn2")
 var btn4 = document.getElementById("answer-btn3")
 
-var shuffledQuestions;
+var highScoreArr = []
+
 var currentQuestionIndex;
 
 // event listeners for howto and start buttons
@@ -133,6 +137,16 @@ var myQuestions = [
             { text: "Morgan Jones", correct: false },
         ],
     },
+    {
+        question: "'You ever dance with the Devil in the pale moonlight?'",
+        answers: [
+            { text: "The Penguin", correct: false },
+            { text: "The Joker", correct: true },
+            { text: "Mr. Freeze", correct: false },
+            { text: "The Scarecrow", correct: false },
+        ],
+    },
+
 ];
 
 // Displays game rules on click
@@ -160,10 +174,8 @@ function startQuiz() {
             .getElementById("answer-btn" + i)
             .setAttribute("data-correct", myQuestions[0].answers[i].correct);
     }
-
     j++
-
-
+    
     var quizTimer = setInterval(function () {
         if (timeleft <= 0) {
             clearInterval(quizTimer);
@@ -174,21 +186,25 @@ function startQuiz() {
         }
         timeleft -= 1;
     }, 1000);
-
+    
+    console.log();
 };
 
 function selectAnswer(button) {
+   
     if(button.getAttribute("data-correct") == "true") {
         score = score += timeleft
         console.log(score);
         document.querySelector("#score").innerHTML = score;
     }else{
-        timeleft = timeleft -= 15
+        timeleft = timeleft -= 20
     }
+
+   
+
     document.getElementById("question").innerHTML = myQuestions[j].question;
 
     for (let i = 0; i < myQuestions[j].answers.length; i++) {
-        //    console.log(myQuestions[0].answers[i].text);
         document.getElementById("answer-btn" + i).innerHTML =
             myQuestions[j].answers[i].text;
         document
@@ -197,15 +213,52 @@ function selectAnswer(button) {
     }
 
     j++
-    
-    
+
+    if(j > 10) {
+        youWin()
+        
+    }
+    console.log(j);
 }
 
 function gameOver(){
     quizContainer.classList.add("hide");
     gameOverCard.classList.remove("hide");
-
 };
+
+function showHighScores() {
+    var highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    var highScoreList = document.getElementById('highScores');
+  
+    highScoreList.innerHTML = highScores
+      .map((score) => `<li>${score.score} - ${score.name}`)
+      .join('');
+}
+
+function checkHighScore(score) {
+    const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
+  
+    if (score > lowestScore) {
+      const name = prompt('You got a highscore! Enter name:');
+      const newScore = { score, name };
+      saveHighScore(newScore, highScores);
+      showHighScores();
+    }
+}
+
+function saveHighScore(score, highScores) {
+    highScores.push(score);
+    highScores.sort((a, b) => b.score - a.score);
+    highScores.splice(NO_OF_HIGH_SCORES);
+  
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+}
+
+function youWin(){
+    quizContainer.classList.add("hide");
+    winner.classList.remove("hide");
+}
 
 
 

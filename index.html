@@ -16,13 +16,15 @@
             <div id="header-body" class="container">
                 <h1 class="display-1 fw-bold">"Quote" Olympus</h1>
                 <h2 class="display-6 fw-lighter fst-italic">A "Who said it?" quiz for "Geek" Heroes </h2>
-            </div>     
+                <h3 class="text-center">High Score: </h3>
+            </div>
+            
         </div>
     </div>
     
     <div id= "rules" class="card hide">
         <div id= "rules-container" class="card-body text-center">
-            <p class="card-text fw-light">You will be given a series of quotes from "Geek Gods" of nerd-culture. <br> Guess right and you earn as many points as there are seconds on the clock. <br> Answer wrong, and you lose 15 seconds... <br> Press the "start" button to begin!</p>
+            <p class="card-text fw-light">You will be given a series of quotes from "Geek Gods" of nerd-culture. <br> Guess right and you earn as many points as there are seconds on the clock. <br> Answer wrong, and you lose 20 seconds... <br> Press the "start" button to begin!</p>
         </div>
     </div>
     
@@ -52,14 +54,26 @@
         <button id= "start-btn" class="btn btn-primary btn-lg btn-block hide">START</button>
     </div>
     <div id= "gameOver" class="card hide">
-        <div class="card-header">
+        <div class="card-header text text-center">
             GAME OVER!
           </div>
         <div id= "gameO-container" class="card-body">
-            <p class="card-text fw-light">Refresh the page to try again! <br> Press the "start" button to begin!</p>
-            <div class="start-btn-container">
-                <button id= "start-btn" class="btn btn-primary btn-lg btn-block hide">START</button>
-            </div>
+            <h3>You ran out of time! Refresh the page to try again!</h3>
+        </div>
+    </div>
+    <div id= "you-win" class="card hide">
+        <div class="card-header text-center">
+            You Win!
+        </div>
+        <div class="card-body">
+            <label for="exampleInputEmail1">Initials</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Initials">
+          </div>
+          <div class="form-group">
+            <span id="score"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Score</button>
+        </form>
         </div>
     </div>
    
